@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_listview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/home_item_gridview_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_size"
+        android:background="@color/divider_line_bg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/newrecommendfragment_living_line_height"
+        android:background="@color/aoyun_divider_line_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/newrecommendfragment_living_layoutheight"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/newrecommendfragment_living_height"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#eb413d"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="正在直播"
+                android:lineSpacingExtra="1dp"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <com.mybox.widget.GridViewWithHeaderAndFooter
+            android:id="@+id/normal_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/homepage_tab_more_marghtleft"
+            android:layout_marginRight="@dimen/homepage_tab_more_marghtright"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none"
+            android:listSelector="@color/transparent"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:scrollingCache="false" />
+        <!--android:layout_marginTop="@dimen/homepage_tab_marghttop"-->
+        <!--android:layout_marginBottom="@dimen/homepage_tab_marghtbottom"-->
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/newrecommendfragment_living_line_height"
+        android:background="@color/aoyun_divider_line_bg" />
+
+</LinearLayout>

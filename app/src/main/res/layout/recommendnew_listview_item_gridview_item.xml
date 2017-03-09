@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_listview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+    <!--瀑布流以下布局距上一个布局的高度-->
+    <View
+        android:id="@+id/home_item_gridview_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_size"
+        android:background="@color/divider_line_bg" />
+    <!--瀑布流以下布局距上一个布局的高度-->
+
+    <include
+        android:id="@+id/home_grid_title"
+        layout="@layout/home_grid_title" />
+
+    <com.mybox.widget.GridViewWithHeaderAndFooter
+        android:id="@+id/normal_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/homepage_tab_more_marghtleft"
+        android:layout_marginRight="@dimen/homepage_tab_more_marghtright"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:horizontalSpacing="@dimen/homepage_tab_horizontalSpacing"
+        android:listSelector="@color/transparent"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:scrollingCache="false" />
+    <!--        android:verticalSpacing="9dp"
+    android:layout_marginTop="@dimen/homepage_linespacing_height"-->
+    <View
+        android:id="@+id/jiange"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_size"
+        android:background="@color/divider_line_bg"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/adimage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+</LinearLayout>

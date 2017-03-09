@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_listview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/home_item_gridview_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_size"
+        android:background="@color/divider_line_bg" />
+
+    <include
+        android:id="@+id/home_grid_title"
+        layout="@layout/home_grid_title" />
+
+    <com.mybox.widget.HorizontalListView
+        android:id="@+id/normal_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_marginBottom="@dimen/homepage_tab_marghtbottom"
+        android:layout_marginLeft="@dimen/homepage_tab_more_marghtleft"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:horizontalSpacing="6dp"
+        android:listSelector="@color/transparent"
+        android:orientation="horizontal"
+        android:scrollbars="none"
+        android:scrollingCache="false"
+         />
+    <!--android:verticalSpacing="9dp"-->
+
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Okgo1.0</string>
+    <!-- xlistview相关 查看更多-->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">释放刷新</string>
+    <string name="xlistview_header_hint_loading">加载中...</string>
+    <string name="xlistview_header_last_time">上次更新：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_footer_hint_no">已加载完全部数据</string>
+
+    <string name="vodnew_title_replace">&#160;&#160;%1$s</string>
+</resources>

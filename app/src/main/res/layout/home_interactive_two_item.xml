@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/home_tab_back"
+    android:orientation="vertical"
+    android:paddingBottom="1.0px">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="30.0px">
+
+        <LinearLayout
+            android:layout_width="480.0px"
+            android:layout_height="760.0px"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivHomeInterTwo1"
+                android:layout_width="fill_parent"
+                android:layout_height="600.0px"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tvHomeInterTwo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30.0px"
+                android:ellipsize="end"
+                android:lines="2"
+                android:textColor="@color/home_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llHomeInterTwoGroup"
+            android:layout_width="480.0px"
+            android:layout_height="760.0px"
+            android:layout_marginLeft="30.0px"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivHomeInterTwo2"
+                android:layout_width="fill_parent"
+                android:layout_height="600.0px"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tvHomeInterTwo2"
+                android:layout_width="455.0px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30.0px"
+                android:ellipsize="end"
+                android:lines="2"
+                android:textColor="@color/home_text" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recommend_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.mybox.widget.XListView
+            android:id="@+id/remmend_new_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"
+            android:scrollingCache="false" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_alert_content"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@color/home_alert_item_bg"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/home_alert_close"
+            android:layout_width="@dimen/homepage_top_close_width_height"
+            android:layout_height="@dimen/homepage_top_close_width_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="9dp"
+            android:src="@drawable/home_alert_close" />
+
+        <TextView
+            android:id="@+id/home_alert_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_toLeftOf="@id/home_alert_close"
+            android:singleLine="true"
+            android:text="继续观看:"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/tuijian_loading"
+        layout="@layout/loading" />
+
+
+</FrameLayout>
+

@@ -1,0 +1,263 @@
+<resources>
+    <dimen name="view_between_distance_horezontal">4dp</dimen>
+    <dimen name="view_between_distance_half_horezontal">2dp</dimen>
+
+    <!-- VodDetailActivity -->
+    <dimen name="vod_detail_big_image_container_height">180dp</dimen>
+    <dimen name="vod_detail_non_juji_container_height">100dp</dimen>
+    <dimen name="vod_detail_juji_container_height">180dp</dimen>
+
+    <!-- Play history ui dimen -->
+    <dimen name="play_history_list_view_margin_top">20dp</dimen>
+    <dimen name="play_history_list_view_margin_left">15dp</dimen>
+    <dimen name="play_history_list_view_margin_right">15dp</dimen>
+    <dimen name="play_history_list_view_item_margin_top">5dp</dimen>
+    <dimen name="play_history_list_view_item_margin_bottom">10dp</dimen>
+    <dimen name="play_history_list_view_item_margin_left">15dp</dimen>
+    <dimen name="play_history_list_view_item_margin_right">15dp</dimen>
+    <dimen name="play_history_list_view_divider_height">8dp</dimen>
+    <dimen name="play_history_list_view_item_height">100dp</dimen>
+
+    <!-- live reserving ui dimen -->
+    <dimen name="live_reserving_list_view_divider_height">3dp</dimen>
+    <dimen name="live_reserve_scroll_view_margin_left">15dp</dimen>
+    <dimen name="live_reserve_scroll_view_margin_right">15dp</dimen>
+    <dimen name="live_reserve_first_frame_layout_margin_top">15dp</dimen>
+    <dimen name="live_reserve_first_list_view_margin_top">5dp</dimen>
+    <dimen name="live_reserve_content_title_height">30dp</dimen>
+    <dimen name="live_reserve_content_title_padding_left">20dp</dimen>
+    <dimen name="live_reserve_content_title_padding_right">20dp</dimen>
+    <dimen name="live_reserve_content_nofify_text_height">20dp</dimen>
+    <dimen name="live_reserve_content_notify_text_padding_right">10dp</dimen>
+    <dimen name="live_reserve_frame_layout_cross_margin_top">10dp</dimen>
+    <dimen name="live_reserve_list_view_item_height">70dp</dimen>
+    <dimen name="live_reserve_list_view_item_margin_left">15dp</dimen>
+    <dimen name="live_reserve_list_view_item_margin_right">15dp</dimen>
+    <dimen name="live_reserve_live_view_item_padding_top">15dp</dimen>
+
+    <!-- live window -->
+    <dimen name="fragment_live_head_height">40dp</dimen>
+    <dimen name="live_tv_button_container_height">40dp</dimen>
+    <dimen name="live_tv_container_margin_horizontal">80dp</dimen>
+    <dimen name="live_tv_button_cross_line_width">2dp</dimen>
+    <dimen name="live_listview_divider_height">5dp</dimen>
+    <dimen name="live_list_item_height">120dp</dimen>
+    <dimen name="live_list_item_picwidth">70dp</dimen>
+    <dimen name="live_list_item_picheight">60dp</dimen>
+    <dimen name="live_item_info_margin_top">15dp</dimen>
+    <dimen name="live_item_info_margin_left">10dp</dimen>
+    <dimen name="live_column_letter_margintop">20dp</dimen>
+    <dimen name="live_column_letter_marginbottom">10dp</dimen>
+    <dimen name="live_column_letter_width">20dip</dimen>
+    <dimen name="small_player_height">241dp</dimen>
+
+    <!-- 九种常用字体 -->
+    <dimen name="text_size_zero">22sp</dimen>
+    <dimen name="text_size_zero1">20sp</dimen>
+    <dimen name="text_size_one">18sp</dimen>
+    <dimen name="text_size_two">17sp</dimen>
+    <dimen name="text_size_three">16sp</dimen>
+    <dimen name="text_size_four">15sp</dimen>
+    <dimen name="text_size_five">14sp</dimen>
+    <dimen name="text_size_six">13sp</dimen>
+    <dimen name="text_size_seven">12sp</dimen>
+    <dimen name="text_size_eight">11sp</dimen>
+    <dimen name="text_size_nine">10sp</dimen>
+    <dimen name="text_size_ten">10sp</dimen>
+    <dimen name="text_size_elev">8sp</dimen>
+    <!-- 时移 -->
+    <dimen name="time_shift_epg_layout_height">35dp</dimen>
+    <dimen name="time_shift_ruler_layout_height">65dp</dimen>
+    <dimen name="time_shift_seek_layout_height">40dp</dimen>
+    <dimen name="time_shift_time_layout_margin">-25dp</dimen>
+    <!-- 点播播放器 -->
+    <dimen name="vod_voice_pading">1dp</dimen>
+    <dimen name="vod_small_bottom_height">40dp</dimen>
+    <dimen name="vod_big_bottom_height">60dp</dimen>
+    <dimen name="vod_voice_min_height">4dp</dimen>
+    <!-- CircleFlowIndicator参数 -->
+    <dimen name="radius">3.0dip</dimen>
+    <dimen name="circleSeparation">11.0dip</dimen>
+    <dimen name="activeRadius">10.5dip</dimen>
+
+    <dimen name="setting_item_height">65dp</dimen>
+    <dimen name="setting_item_height_new">49dp</dimen>
+    <dimen name="setting_item_head">45dp</dimen>
+    <dimen name="new_indicator">26dp</dimen>
+
+    <dimen name="classifyFrament_item_marginleft">45dp</dimen>
+
+
+    <!-- 6.0 设置中的字体及常用变局-->
+    <dimen name="setting_font_1">14sp</dimen>
+    <dimen name="setting_margin_left_1">24sp</dimen>
+    <dimen name="setting_margin_top_1">24sp</dimen>
+    <dimen name="setting_margin_right_1">24sp</dimen>
+    <dimen name="setting_margin_bottom_1">11sp</dimen>
+    <dimen name="setting_margin_1">20dp</dimen>
+    <dimen name="setting_margin_2">21dp</dimen>
+    <dimen name="setting_margin_3">23dp</dimen>
+    <dimen name="setting_margin_4">25dp</dimen>
+    <dimen name="setting_margin_5">45dp</dimen>
+    <dimen name="setting_margin_6">59dp</dimen>
+
+    <dimen name="setting_list_item_height">44dp</dimen>
+    <dimen name="setting_list_item_height_1">50dp</dimen>
+    <dimen name="setting_list_item_height_2">108dp</dimen>
+
+    <dimen name="setting_margin_between_item">8dp</dimen>
+    <dimen name="setting_divider_1">37dp</dimen>
+    <dimen name="setting_divider_2">79dp</dimen>
+    <dimen name="title_bar_title_size">18sp</dimen>
+    <dimen name="title_bar_right_text_size">16sp</dimen>
+    <dimen name="title_bar_back_button_width">50dp</dimen>
+    <!-- 听电视-->
+    <dimen name="fix_switchView_height">2dp</dimen>
+
+    <dimen name="setting_help_text_size">13sp</dimen>
+
+    <!--春晚互动-->
+    <dimen name="spring_radio_corner">6dp</dimen>
+    <dimen name="tab_host_bottom">47.5dp</dimen>
+    <dimen name="tab_img_bottom">47.5dp</dimen>
+    <dimen name="divider_line_size">9dp</dimen>
+
+    <!--6.1.5版本互动播放器更多列表相关尺寸-->
+    <dimen name="inter_player_more_dp1">9dp</dimen>
+    <dimen name="inter_player_more_dp2">6dp</dimen>
+    <dimen name="inter_player_more_dp3">81dp</dimen>
+    <dimen name="inter_player_more_dp4">45dp</dimen>
+    <dimen name="inter_player_more_dp5">210dp</dimen>
+    <dimen name="inter_player_more_dp6">27dp</dimen>
+    <dimen name="inter_player_more_sp1">15sp</dimen>
+    <dimen name="inter_player_more_sp2">14sp</dimen>
+
+    <!--首页UI-->
+    <dimen name="homepage_top_textsize">16sp</dimen>
+    <dimen name="homepage_top_close_width_height">18dp</dimen>
+    <dimen name="newrecommendfragment_living_layoutheight">80dp</dimen>
+    <dimen name="newrecommendfragment_living_height">36dp</dimen>
+    <dimen name="newrecommendfragment_living_line_height">0.25dp</dimen>
+    <dimen name="homepage_title_one">15sp</dimen>
+    <dimen name="homepage_title_two">13sp</dimen>
+    <dimen name="homepage_title_three">12sp</dimen>
+    <dimen name="homepage_layout_height">42dp</dimen>
+    <dimen name="homepage_layout_lefttv_distance">9dp</dimen>
+    <dimen name="homepage_layout_righttv_distance">9dp</dimen>
+    <dimen name="homepage_layout_lefttv">15sp</dimen>
+    <dimen name="homepage_layout_righttv">12sp</dimen>
+    <dimen name="homepage_linespacing_height">9dp</dimen>
+    <dimen name="homepage_tab_imagesize">3.5dp</dimen>
+    <dimen name="homepage_tab_more_height">15dp</dimen>
+    <dimen name="homepage_tab_more_weight">15dp</dimen>
+    <dimen name="homepage_tab_more_marghtright">9dp</dimen>
+    <dimen name="homepage_tab_more_marghtleft">9dp</dimen>
+    <dimen name="homepage_tab_marghtbottom">9dp</dimen>
+    <dimen name="homepage_tab_marghttop">9dp</dimen>
+    <dimen name="homepage_tab_text_topimg">6dp</dimen>
+    <dimen name="homepage_tab_horizontalSpacing">6dp</dimen>
+    <!--图片顶部靠左边距-->
+    <dimen name="homepage_topleft_tab">16dp</dimen>
+    <dimen name="homepage_topleft_tabtextsize">10sp</dimen>
+    <dimen name="homepage_imagetop_textviewpaddingleft">2.5dp</dimen>
+    <dimen name="homepage_imagetop_textviewpaddingright">2.5dp</dimen>
+    <dimen name="homepage_fontinimage_marginleft">4dp</dimen>
+    <dimen name="homepage_top_searchbutton">24dp</dimen>
+    <!--首页UI-->
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--秀场 begin-->
+    <dimen name="title_text_size2">10.0sp</dimen>
+    <dimen name="show_broadcast_input_sendbtn_left_right_margin2">3.0dp</dimen>
+    <dimen name="show_close_width">36dp</dimen>
+    <dimen name="show_close_height">36dp</dimen>
+    <dimen name="show_headbg_width">155.5dp</dimen>
+    <dimen name="show_headbg_height">42dp</dimen>
+    <dimen name="show_bottom_weight_height">42dp</dimen>
+    <dimen name="show_bottom_text_distance">18dp</dimen>
+    <dimen name="show_bottom_share_head_distance">12dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="heart_anim_bezier_x_rand">40.0dp</dimen>
+    <dimen name="heart_anim_init_x">50.0dp</dimen>
+    <dimen name="heart_anim_init_y">25.0dp</dimen>
+    <dimen name="heart_anim_length">100.0dp</dimen>
+    <dimen name="heart_anim_length_rand">150.0dp</dimen>
+    <dimen name="heart_anim_x_point_factor">30.0dp</dimen>
+    <dimen name="heart_size_height">30.0dp</dimen>
+    <dimen name="heart_size_width">30.0dp</dimen>
+    <dimen name="icon_column_width">150.0dp</dimen>
+    <dimen name="icon_column_height">60.0dp</dimen>
+    <dimen name="circle_image_radius">60.0dp</dimen>
+    <dimen name="list_view_width">180.0dp</dimen>
+    <dimen name="list_view_height">95.0dp</dimen>
+    <dimen name="list_view_margin_bottom">80.0dp</dimen>
+    <dimen name="share_column_height">180.0dp</dimen>
+    <dimen name="heart_layout_width">100.0dp</dimen>
+    <dimen name="heart_layout_margin_bottom">10.0dp</dimen>
+    <dimen name="heart_layout_margin_right">1.0dp</dimen>
+    <dimen name="title_text_size">12.0sp</dimen>
+    <dimen name="title_text_left_margin">65.0dp</dimen>
+    <dimen name="title_text_top_bottom_margin">6.0dp</dimen>
+    <dimen name="room_close_xBtn_size">48.0dp</dimen>
+    <dimen name="room_close_xBtn_margin">12.0dp</dimen>
+    <dimen name="room_close_endPic_size">128.0dp</dimen>
+    <dimen name="room_close_endPic_to_xbtn">28.0dp</dimen>
+    <dimen name="room_close_endPic_to_text1">24.0dp</dimen>
+    <dimen name="room_close_text1_to_text2">8.0dp</dimen>
+    <dimen name="room_close_text_font_size">20.0sp</dimen>
+    <dimen name="room_close_finishBtn_size">40.0dp</dimen>
+    <dimen name="room_close_finishBtn_bottom_margin">64.0dp</dimen>
+    <dimen name="room_close_finishText_font_size">20dp</dimen>
+    <dimen name="room_close_finishBtn_padding">10.0dp</dimen>
+    <dimen name="room_close_finishBtn_left_right_margin">12.0dp</dimen>
+    <dimen name="room_close_shareColumn_upTo_finishBtn">48.0dp</dimen>
+    <dimen name="room_close_shareColumn_icon_size">68.0dp</dimen>
+    <dimen name="room_close_shareColumn_shareBtn_size">68.0dp</dimen>
+    <dimen name="room_close_shareColumn_text1_font_size">16.0sp</dimen>
+    <dimen name="room_close_shareColumn_text2_font_size">12.0sp</dimen>
+    <dimen name="room_close_shareColumn_text_left_right_padding">16.0dp</dimen>
+    <dimen name="room_close_shareColumn_left_right_margin">12.0dp</dimen>
+    <dimen name="room_close_shareColumn_text_top_bottom_margin">12.0dp</dimen>
+    <dimen name="room_close_shareColumn_text_top_bottom_padding">4.0dp</dimen>
+    <dimen name="room_close_shareColumn_bg_radius">34.0dp</dimen>
+    <dimen name="value_zero">0.0dp</dimen>
+    <dimen name="show_broadcast_input_height">40.0dp</dimen>
+    <dimen name="show_broadcast_input_bg_height">27.0dp</dimen>
+    <dimen name="show_broadcast_input_bg_stroke">1.0dp</dimen>
+    <dimen name="show_broadcast_input_bottom_margin">295.0dp</dimen>
+    <dimen name="show_broadcast_input_column_padding">2.0dp</dimen>
+    <dimen name="show_broadcast_input_edittext_padding">5.0dp</dimen>
+    <dimen name="show_broadcast_input_edittext_font_size">16.0sp</dimen>
+    <dimen name="show_broadcast_input_sendbtn_left_right_margin">5.0dp</dimen>
+    <dimen name="show_broadcast_edittext_left_right_margin">24.0dp</dimen>
+    <dimen name="show_broadcast_iconcolumn_height">42.0dp</dimen>
+    <dimen name="show_broadcast_iconcolumn_width">155.5dp</dimen>
+    <dimen name="show_broadcast_iconcolumn_radius">28.0dp</dimen>
+    <dimen name="show_broadcast_subvideo_width">94.5dp</dimen>
+    <dimen name="show_broadcast_subvideo_height">168.0dp</dimen>
+    <dimen name="show_broadcast_avatar_margin_top">9.0dp</dimen>
+    <dimen name="show_broadcast_avatar_margin_left">9.0dp</dimen>
+    <dimen name="show_broadcast_avatar_margin_right">9.0dp</dimen>
+    <dimen name="show_broadcast_text_btn_bg_radius">18.0dp</dimen>
+    <dimen name="show_broadcast_text_btn_height">42.0dp</dimen>
+    <dimen name="show_broadcast_text_btn_width">234dp</dimen>
+    <dimen name="show_broadcast_message_line_extra">9dp</dimen>
+    <dimen name="show_listview_line_top">9dp</dimen>
+    <dimen name="show_listview_height">110dp</dimen>
+    <dimen name="show_listview_weight">234dp</dimen>
+    <dimen name="show_bottom_button_fontsize">16sp</dimen>
+    <dimen name="show_bottom_layout_padding">9dp</dimen>
+    <dimen name="show_bottom_layout_paddingtop">30dp</dimen>
+    <dimen name="show_head_textview_marginleft">51dp</dimen>
+    <dimen name="show_head_textview_marginright">9dp</dimen>
+    <dimen name="show_listview_textview__margintop">4.5dp</dimen>
+    <dimen name="show_listview_textview__marginbottom">4.5dp</dimen>
+    <dimen name="show_listview_textview_fontsize">14sp</dimen>
+    <!--秀场 end-->
+    <!--直播UI修改-->
+    <dimen name="living_wangpai_imagespace">6dp</dimen>
+    <dimen name="home_bottom">24dp</dimen>
+    <!--直播UI修改-->
+</resources>

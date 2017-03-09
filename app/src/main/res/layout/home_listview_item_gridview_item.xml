@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:background="@color/transparent" />
+    <!--双标题模板-->
+    <FrameLayout
+        android:id="@+id/guozi_rlBigVodnew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/guozi_ivPic2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--双列横图两列图片的大小-->
+                    <ImageView
+                        android:id="@+id/guozi_ivPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="94.5dp"
+                        android:scaleType="fitXY" />
+                    <!--双列横图两列图片的大小-->
+
+                    <TextView
+                        android:id="@+id/classify_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/homepage_topleft_tab"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/homepage_imagetop_textviewpaddingleft"
+                        android:paddingRight="@dimen/homepage_imagetop_textviewpaddingright"
+                        android:text="话题"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/homepage_topleft_tabtextsize"
+                        android:visibility="gone" />
+                    <!--android:paddingRight="4dp"
+                    android:paddingLeft="4dp"-->
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/guozi_tvUpdateTitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/home_viewflow_text_bg"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/homepage_fontinimage_marginleft"
+                    android:paddingRight="@dimen/homepage_fontinimage_marginleft"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/homepage_title_two" />
+                <!--  android:paddingRight="5dp"-->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/guozi_tvlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/homepage_imagetop_textviewpaddingleft"
+                android:paddingRight="@dimen/homepage_imagetop_textviewpaddingright"
+                android:text="投票"
+                android:textColor="@color/white"
+                android:textSize="@dimen/homepage_topleft_tabtextsize"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/guozi_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:gravity="left"
+        android:maxLines="2"
+        android:text="主标题"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    <!--android:ellipsize="end"-->
+
+    <TextView
+        android:id="@+id/guozi_label_double"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="副标题"
+        android:textColor="#666666"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:background="@color/transparent" />
+
+</LinearLayout>

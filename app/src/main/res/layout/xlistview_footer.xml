@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/llFooter">
+    <RelativeLayout
+        android:id="@+id/rlFooterContent"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="55dp">
+
+        <ProgressBar
+            android:id="@+id/pbFooterProgressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tvFooterHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/gray1"
+            android:text="@string/xlistview_footer_hint_normal" />
+        <TextView
+            android:id="@+id/tvNoMoreDataHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/xlistview_footer_hint_no"
+            android:layout_centerInParent="true"
+            android:textColor="@color/gray1"
+            android:visibility="gone"
+             />
+    </RelativeLayout>
+
+</LinearLayout>

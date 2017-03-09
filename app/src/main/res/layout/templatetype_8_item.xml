@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+    <!--瀑布流格式的布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/homepage_tab_marghtbottom"
+        android:layout_marginTop="@dimen/homepage_tab_marghttop"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="67.5dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/imageview_content"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/iv_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/homepage_topleft_tab"
+                    android:background="@color/blue"
+                    android:gravity="center"
+                    android:maxEms="2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/homepage_title_three" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/iv_pic"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:gravity="top"
+                    android:lines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/live_play_item_color"
+                    android:textSize="@dimen/homepage_title_one" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="9dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/time_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/img_time" />
+
+                        <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="01:29:30"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/homepage_title_three" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textSize="@dimen/homepage_title_three"
+                        android:visibility="visible" />
+                    <!--android:background="@drawable/type8_bg_btn"-->
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/jiantou"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
+            android:src="@drawable/home_live_item_more"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!--瀑布流item的线-->
+    <View
+        android:id="@+id/type_8_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:background="@color/divider_line_bg" />
+</LinearLayout>
