@@ -15,15 +15,13 @@ import com.mybox.ui.fragment.NewRecommendFragment;
 import com.mybox.ui.fragment.Rec2Fragment;
 import com.mybox.ui.fragment.Rec1Fragment;
 import com.mybox.ui.fragment.Rec3Fragment;
+import com.mybox.ui.fragment.RecyclerFragment;
 
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     private FragmentManager fm;
-    private NewRecommendFragment mHomeFragment;
-    private Rec1Fragment mPondFragment;
-    private Rec2Fragment mMessageFragment;
-    private Rec3Fragment mMineFragment;
+    private Fragment mHomeFragment,mPondFragment,mMessageFragment,mMineFragment;
     private Fragment mCurrent;
 
     private RelativeLayout mHomeLayout;
@@ -144,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 hideFragment(mHomeFragment, fragmentTransaction);
                 hideFragment(mMessageFragment, fragmentTransaction);
                 if (mMineFragment == null) {
-                    mMineFragment = new Rec3Fragment();
+                    mMineFragment = new RecyclerFragment();
                     fragmentTransaction.add(R.id.content_layout, mMineFragment);
                 } else {
                     mCurrent = mPondFragment;

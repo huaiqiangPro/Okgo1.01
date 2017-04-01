@@ -58,7 +58,7 @@ import rx.functions.Action1;
  * @Version: 版本  1.0  2016/4/6
  */
 
-public class NewRecommendFragment extends Fragment implements View.OnClickListener {
+public class RecommendFragment extends Fragment implements View.OnClickListener {
     private static final String TAG = "NewRecommendFragment";
 
 
