@@ -1,4 +1,4 @@
-package com.designmode;
+package com.mybox.designmode;
 
 import java.util.HashMap;
 import java.util.Map;

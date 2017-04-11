@@ -12,7 +12,7 @@ import com.mybox.base.MyBaseAdapter;
 import com.mybox.listener.LiveChannelItemListener;
 import com.mybox.model.RecommendGuessYouLove;
 import com.mybox.model.RecommendHomeColumnListInfo;
-import com.mybox.okgo.R;
+import com.mybox.R;
 import com.mybox.utils.FinalBitmap;
 
 import java.util.List;

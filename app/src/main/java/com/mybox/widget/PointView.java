@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.mybox.okgo.R;
+import com.mybox.R;
 
 
 /*

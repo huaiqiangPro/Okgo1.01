@@ -18,7 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.mybox.okgo.R;
+import com.mybox.R;
 
 public class XListViewHeader extends LinearLayout {
 	private LinearLayout mContainer;

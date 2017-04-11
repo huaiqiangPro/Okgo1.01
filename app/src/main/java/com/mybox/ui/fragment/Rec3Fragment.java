@@ -25,7 +25,7 @@ import com.mybox.listener.MoreOnClickListener;
 import com.mybox.model.AdBigImageData;
 import com.mybox.model.RecommendHomeColumnListInfo;
 import com.mybox.model.RecommendedHomeBean;
-import com.mybox.okgo.R;
+import com.mybox.R;
 import com.mybox.utils.FinalBitmap;
 import com.mybox.utils.FitScreenUtil;
 import com.mybox.utils.Logs;

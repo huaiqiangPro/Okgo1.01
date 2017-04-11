@@ -10,7 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mybox.okgo.R;
+import com.mybox.R;
 import com.mybox.ui.fragment.NewRecommendFragment;
 import com.mybox.ui.fragment.Rec2Fragment;
 import com.mybox.ui.fragment.Rec1Fragment;

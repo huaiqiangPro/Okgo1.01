@@ -1,4 +1,4 @@
-package com.designmode;
+package com.mybox.designmode;
 
 /**
  * (RTFSC)
@@ -26,23 +26,4 @@ public class Singleton {
     private static class SingletonHolder {
         private static final Singleton sSingleton = new Singleton();
     }
-}
-
-class SingleTon {
-    private static volatile SingleTon singleTon = null;
-
-    private SingleTon() {
-    }
-
-    public static SingleTon getInstance() {
-        if (singleTon == null) {
-            synchronized (SingleTon.class) {
-                if (singleTon == null) {
-                    singleTon = new SingleTon();
-                }
-            }
-        }
-        return singleTon;
-    }
-
 }

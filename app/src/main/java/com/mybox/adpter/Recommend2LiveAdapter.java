@@ -15,7 +15,7 @@ import com.mybox.model.LiveChannelProgressBean;
 import com.mybox.model.RecommendedHomeBean;
 import com.mybox.net.retrofit.HttpCallback;
 import com.mybox.net.retrofit.HttpTools;
-import com.mybox.okgo.R;
+import com.mybox.R;
 import com.mybox.utils.FinalBitmap;
 
 import java.util.List;

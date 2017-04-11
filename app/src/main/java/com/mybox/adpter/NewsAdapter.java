@@ -6,7 +6,7 @@ import com.classic.adapter.BaseAdapterHelper;
 import com.classic.adapter.CommonRecyclerAdapter;
 import com.mybox.imageload.PicassoImageLoad;
 import com.mybox.model.News;
-import com.mybox.okgo.R;
+import com.mybox.R;
 import com.mybox.ui.fragment.Consts;
 
 import java.util.Date;

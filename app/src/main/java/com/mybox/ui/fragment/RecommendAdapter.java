@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide;
 import com.mybox.AppContext;
 import com.mybox.base.MyBaseAdapter;
 import com.mybox.listener.LiveChannelItemListener;
-import com.mybox.okgo.R;
+import com.mybox.R;
 import com.mybox.utils.FinalBitmap;
 
 import java.util.List;

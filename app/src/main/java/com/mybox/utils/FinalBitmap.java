@@ -25,7 +25,7 @@ import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
-import com.mybox.okgo.R;
+import com.mybox.R;
 
 
 public class FinalBitmap {

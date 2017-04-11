@@ -5,7 +5,6 @@ ext {
     android = [
             compileSdkVersion: 25,
             buildToolsVersion: "25.0.2",
-            applicationId    : "com.mybox.ghq.okgo10",
             minSdkVersion    : 10,
             targetSdkVersion : 25,
             versionCode      : 6,

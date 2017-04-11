@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.mybox.base.MyBaseAdapter;
 import com.mybox.listener.LiveChannelItemListener;
 import com.mybox.model.RecommendedHomeBean;
-import com.mybox.okgo.R;
+import com.mybox.R;
 import com.mybox.utils.FinalBitmap;
 import com.mybox.utils.FitScreenUtil;
 import com.mybox.utils.Logs;

@@ -24,7 +24,7 @@ import com.mybox.listener.LiveChannelItemListener;
 import com.mybox.listener.MoreOnClickListener;
 import com.mybox.model.RecommendHomeColumnListInfo;
 import com.mybox.model.RecommendedHomeBean;
-import com.mybox.okgo.R;
+import com.mybox.R;
 import com.mybox.utils.FinalBitmap;
 import com.mybox.widget.GridViewWithHeaderAndFooter;
 import com.mybox.widget.HorizontalListView;

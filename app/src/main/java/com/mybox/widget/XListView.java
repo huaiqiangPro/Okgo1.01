@@ -25,7 +25,7 @@ import android.widget.RelativeLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
 
-import com.mybox.okgo.R;
+import com.mybox.R;
 import com.mybox.utils.Logs;
 
 import java.text.SimpleDateFormat;
