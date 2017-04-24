@@ -4,10 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 
-/**
- * Created by ykglove on 2015/9/22.
- * 新加入
- */
+
 public class RecommendedHomeBean implements Serializable {
 
     private DataEntity data;

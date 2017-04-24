@@ -1,4 +1,4 @@
-package com.mybox.designmode;
+package com.mybox.modedesign;
 
 /**
  * (RTFSC)
