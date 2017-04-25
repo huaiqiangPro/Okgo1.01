@@ -1,7 +1,6 @@
 package com.mybox.ui.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -17,10 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.classic.adapter.CommonRecyclerAdapter;
-import com.classic.adapter.interfaces.ImageLoad;
-import com.mybox.AppContext;
+import com.mybox.AppContextLike;
 import com.mybox.adpter.NewsAdapter;
 import com.mybox.adpter.Recommend5LiveListAdapter;
 import com.mybox.adpter.RecommendGridViewAdapter;
@@ -40,7 +37,6 @@ import com.mybox.utils.SizeUtils;
 import com.mybox.widget.AutoScrollViewPager;
 import com.mybox.widget.GridViewWithHeaderAndFooter;
 import com.mybox.widget.PointView;
-import com.mybox.widget.XListView;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -95,7 +91,7 @@ public class RecyclerFragment extends BaseComponentFragment<RecommendPresenter> 
     }
 
     protected void initData() {
-        if (AppContext.getBasePath() != null) {
+        if (AppContextLike.getBasePath() != null) {
             String mRecUrl = "http://cbox.cntv.cn/json2015/topshouye/tuijianaoyun/index.json";
             if (mRecUrl != null) {
                 mPresenter.loadData(mRecUrl);
@@ -190,12 +186,12 @@ public class RecyclerFragment extends BaseComponentFragment<RecommendPresenter> 
 
                                 LinearLayout.LayoutParams layoutParams
                                         = (LinearLayout.LayoutParams) holder.mGridView.getLayoutParams();
-                                int margin = SizeUtils.dip2px(AppContext.getInstance(), 14);
+                                int margin = SizeUtils.dip2px(AppContextLike.getInstance(), 14);
                                 layoutParams.setMargins(0, margin, 0, margin);
                                 holder.mGridView.setLayoutParams(layoutParams);
 
 
-                                MyBaseAdapter adapter = new Recommend5LiveListAdapter(AppContext.getInstance(), mInteractliveList);
+                                MyBaseAdapter adapter = new Recommend5LiveListAdapter(AppContextLike.getInstance(), mInteractliveList);
                                 ((GridViewWithHeaderAndFooter) holder.mGridView).setAdapter(adapter);
 
                                 LiveChannelItemListener listener = new LiveChannelItemListener(getActivity(), mContentList, i);
@@ -215,7 +211,7 @@ public class RecyclerFragment extends BaseComponentFragment<RecommendPresenter> 
 
                                     if (mColumnListEntity.isClone()) {
 
-                                        holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
+                                        holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
                                         if (null != mColumnListEntity.getAdImgUrl() && !"".equals(mColumnListEntity.getAdImgUrl())) {
                                             holder.ad_iv.setVisibility(View.VISIBLE);
                                             fb.display(holder.ad_iv, mColumnListEntity.getAdImgUrl());
@@ -232,7 +228,7 @@ public class RecyclerFragment extends BaseComponentFragment<RecommendPresenter> 
                                         }
 
 
-                                        MyBaseAdapter adapter = new RecommendGridViewAdapter(AppContext.getInstance(), list, (holder.mGridView).getLayoutParams());
+                                        MyBaseAdapter adapter = new RecommendGridViewAdapter(AppContextLike.getInstance(), list, (holder.mGridView).getLayoutParams());
 
                                         if (adapter != null && adapter instanceof RecommendGridViewAdapter) {
                                             if (mContentList != null) {
@@ -283,14 +279,14 @@ public class RecyclerFragment extends BaseComponentFragment<RecommendPresenter> 
                                                         holder.mMoreView.setOnClickListener(mMoreListeners.get(i));
                                                     }
                                                 }
-                                                holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
+                                                holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
                                                 if (null != mColumnListEntity.getAdImgUrl() && !"".equals(mColumnListEntity.getAdImgUrl())) {
                                                     holder.ad_iv.setVisibility(View.VISIBLE);
                                                     fb.display(holder.ad_iv, mColumnListEntity.getAdImgUrl());
                                                 }
 
                                                 ((GridViewWithHeaderAndFooter) holder.mGridView).setNumColumns(2);
-                                                adapter = new RecommendGridViewAdapter(AppContext.getInstance(), mItemList);
+                                                adapter = new RecommendGridViewAdapter(AppContextLike.getInstance(), mItemList);
 
                                                 if (adapter != null && adapter instanceof RecommendGridViewAdapter) {
                                                     if (mContentList != null) {
@@ -310,7 +306,7 @@ public class RecyclerFragment extends BaseComponentFragment<RecommendPresenter> 
 
                                                 holder.mGridViewTextContent.setVisibility(View.GONE);
 
-                                                holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
+                                                holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
                                                 if (null != mColumnListEntity.getAdImgUrl() && !"".equals(mColumnListEntity.getAdImgUrl())) {
                                                     holder.ad_iv.setVisibility(View.VISIBLE);
                                                     fb.display(holder.ad_iv, mColumnListEntity.getAdImgUrl());
@@ -334,7 +330,7 @@ public class RecyclerFragment extends BaseComponentFragment<RecommendPresenter> 
                                                 }
 
 
-                                                adapter = new RecommendType8ListAdapter(AppContext.getInstance(), mItemList);
+                                                adapter = new RecommendType8ListAdapter(AppContextLike.getInstance(), mItemList);
                                                 ((RecommendType8ListAdapter) adapter).setType(3);
 
                                                 ((GridViewWithHeaderAndFooter) holder.mGridView).setAdapter(adapter);

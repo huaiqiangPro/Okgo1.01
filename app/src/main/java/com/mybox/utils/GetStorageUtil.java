@@ -6,7 +6,7 @@ import android.os.Environment;
 import android.os.StatFs;
 import android.os.storage.StorageManager;
 
-import com.mybox.AppContext;
+import com.mybox.AppContextLike;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
@@ -144,7 +144,7 @@ public class GetStorageUtil {
      */
     public boolean isDownload(Context tContext) {
         long remainSize;
-        SharedPreferences savePreferences = AppContext.getInstance().getSharedPreferences("save_path", 0);
+        SharedPreferences savePreferences = AppContextLike.getInstance().getSharedPreferences("save_path", 0);
         if (savePreferences.getString("store", "phone").equals("phone")) {
             remainSize = GetStorageUtil.getInstance().getRomAvailableSize();//获得机身剩余大小
         } else {

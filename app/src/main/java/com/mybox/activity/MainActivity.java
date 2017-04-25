@@ -45,17 +45,17 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         fragmentTransaction.replace(R.id.content_layout, mHomeFragment);
         fragmentTransaction.commit();
 
-        RxTavaTest rx = new RxTavaTest();
-        rx.test01();
-        rx.test02();
-        rx.test03();
-        rx.test04();
-        rx.test05();
-        rx.test06();
-        rx.test07();
-        rx.test08();
-        rx.test09();
-        rx.test10();
+//        RxTavaTest rx = new RxTavaTest();
+//        rx.test01();
+//        rx.test02();
+//        rx.test03();
+//        rx.test04();
+//        rx.test05();
+//        rx.test06();
+//        rx.test07();
+//        rx.test08();
+//        rx.test09();
+//        rx.test10();
 
     }
 

@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mybox.AppContext;
+import com.mybox.AppContextLike;
 import com.mybox.adpter.RecommendGridViewAdapter;
 import com.mybox.adpter.RecommendGridViewyingshijuAdapter;
 import com.mybox.adpter.RecommendHorizontalcainixihuanAdapter;
@@ -148,7 +148,7 @@ public class Rec1Adapter extends BaseAdapter {
         List<RecommendHomeColumnListInfo.DataEntity.ItemListEntity> mItemList= ((RecommendHomeColumnListInfo) mColumnBean.getInfo()).getData().getItemList();
         switch (type) {
             case "0":
-                holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
+                holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
                 if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                     holder.ad_iv.setVisibility(View.VISIBLE);
                     fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
@@ -165,7 +165,7 @@ public class Rec1Adapter extends BaseAdapter {
                     holder.mMoreView.setOnClickListener(mMoreListeners.get(i));
                 }
 
-                adapter = new RecommendGridViewAdapter(AppContext.getInstance(), list, (holder.mGridView).getLayoutParams());
+                adapter = new RecommendGridViewAdapter(AppContextLike.getInstance(), list, (holder.mGridView).getLayoutParams());
                 if (adapter != null && adapter instanceof RecommendGridViewAdapter) {
                     if (mContentList != null) {
                         if (mContentList.get(i) != null && mContentList.get(i) instanceof RecommendedHomeBean.DataEntity.ColumnListEntity) {
@@ -184,7 +184,7 @@ public class Rec1Adapter extends BaseAdapter {
             case "1":
             case "2":
             case "5":
-                holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
+                holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
                 if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                     holder.ad_iv.setVisibility(View.VISIBLE);
                     fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
@@ -223,7 +223,7 @@ public class Rec1Adapter extends BaseAdapter {
                 if ("5".equals(type)) {
                     //  3列
                     ((GridViewWithHeaderAndFooter)holder.mGridView).setNumColumns(3);
-                    adapter = new RecommendGridViewyingshijuAdapter(AppContext.getInstance(), mItemList, type);
+                    adapter = new RecommendGridViewyingshijuAdapter(AppContextLike.getInstance(), mItemList, type);
 
                     if (adapter != null && adapter instanceof RecommendGridViewyingshijuAdapter) {
                         if (mContentList != null) {
@@ -237,7 +237,7 @@ public class Rec1Adapter extends BaseAdapter {
                 } else{
                     //   2列
                     ((GridViewWithHeaderAndFooter)holder.mGridView).setNumColumns(2);
-                    adapter = new RecommendGridViewAdapter(AppContext.getInstance(), mItemList);
+                    adapter = new RecommendGridViewAdapter(AppContextLike.getInstance(), mItemList);
 
                     if (adapter != null && adapter instanceof RecommendGridViewAdapter) {
                         if (mContentList != null) {
@@ -266,7 +266,7 @@ public class Rec1Adapter extends BaseAdapter {
             case "3":
             case "4":
 
-                holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));//设置标题
+                holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));//设置标题
                 if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                     holder.ad_iv.setVisibility(View.VISIBLE);
                     fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
@@ -280,7 +280,7 @@ public class Rec1Adapter extends BaseAdapter {
                         mItemList = mItemList.subList(0, 5);
                     }
 
-                    adapter = new RecommendType4ListAdapter(AppContext.getInstance(), mItemList, true);
+                    adapter = new RecommendType4ListAdapter(AppContextLike.getInstance(), mItemList, true);
                     ((RecommendType4ListAdapter) adapter).setType(3);
                     ((GridViewWithHeaderAndFooter)holder.mGridView).setAdapter(adapter);
                 } else {
@@ -288,7 +288,7 @@ public class Rec1Adapter extends BaseAdapter {
                         mItemList = mItemList.subList(0, 8);
                     }
 
-                    adapter = new RecommendType4ListAdapter(AppContext.getInstance(), mItemList);
+                    adapter = new RecommendType4ListAdapter(AppContextLike.getInstance(), mItemList);
                     ((GridViewWithHeaderAndFooter)holder.mGridView).setAdapter(adapter);
                 }
                 if (!TextUtils.isEmpty(mColumnBean.getCategoryControl()) &&
@@ -313,13 +313,13 @@ public class Rec1Adapter extends BaseAdapter {
                 if ("6".equals(type)) {
 
 
-                    holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
+                    holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
                     if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                         holder.ad_iv.setVisibility(View.VISIBLE);
                         fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
                     }
 
-                    adapter = new RecommendHorizontaljinrikandainAdapter(AppContext.getInstance(), mItemList);
+                    adapter = new RecommendHorizontaljinrikandainAdapter(AppContextLike.getInstance(), mItemList);
 
                     if (adapter != null && adapter instanceof RecommendHorizontaljinrikandainAdapter) {
                         if (mContentList != null) {
@@ -339,13 +339,13 @@ public class Rec1Adapter extends BaseAdapter {
                     ((RecommendHorizontaljinrikandainAdapter) adapter).setListener(mListeners.get(i));
                 } else {
 
-                    holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
+                    holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
                     if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                         holder.ad_iv.setVisibility(View.VISIBLE);
                         fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
                     }
 
-                    adapter = new RecommendHorizontalcainixihuanAdapter(AppContext.getInstance(), ((List) mColumnBean.getInfo()));
+                    adapter = new RecommendHorizontalcainixihuanAdapter(AppContextLike.getInstance(), ((List) mColumnBean.getInfo()));
 
                     ((HorizontalListView)holder.mGridView).setAdapter(adapter);
                     ((HorizontalListView)holder.mGridView).setSelection(100);
@@ -368,7 +368,7 @@ public class Rec1Adapter extends BaseAdapter {
             case "8":
 
                 holder.mGridViewTextContent.setVisibility(View.GONE);
-                holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));//设置标题
+                holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));//设置标题
                 if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                     holder.ad_iv.setVisibility(View.VISIBLE);
                     fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
@@ -382,7 +382,7 @@ public class Rec1Adapter extends BaseAdapter {
                 }
 
 
-                adapter = new RecommendType8ListAdapter(AppContext.getInstance(), mItemList);
+                adapter = new RecommendType8ListAdapter(AppContextLike.getInstance(), mItemList);
                 ((RecommendType8ListAdapter) adapter).setType(3);
 
                 ((GridViewWithHeaderAndFooter)holder.mGridView).setAdapter(adapter);

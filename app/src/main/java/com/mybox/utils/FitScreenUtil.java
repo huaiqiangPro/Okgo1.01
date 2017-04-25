@@ -4,7 +4,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.mybox.AppContext;
+import com.mybox.AppContextLike;
 
 
 public class FitScreenUtil {
@@ -12,7 +12,7 @@ public class FitScreenUtil {
     protected static int mScrrenH;
 
     public static void setParams(View view, int temp, ViewGroup.LayoutParams params2) {
-        int[] mSreenSize = UIUtils.getScrren(AppContext.getInstance());
+        int[] mSreenSize = UIUtils.getScrren(AppContextLike.getInstance());
         mScrrenH = mSreenSize[1];
         mScrrenW = mSreenSize[0];
         ViewGroup.LayoutParams params = view.getLayoutParams();
@@ -39,7 +39,7 @@ public class FitScreenUtil {
      * @param temp
      */
     public static void setParams(View view, int temp) {
-        int[] mSreenSize = UIUtils.getScrren(AppContext.getInstance());
+        int[] mSreenSize = UIUtils.getScrren(AppContextLike.getInstance());
         mScrrenH = mSreenSize[1];
         mScrrenW = mSreenSize[0];
         if (view == null) {
@@ -181,7 +181,7 @@ public class FitScreenUtil {
             case 33://两列数据4:3 和1000一样
                 // 宽330
                 // 高186
-                params.width = (mScrrenW - (SizeUtils.dip2px(AppContext.getInstance(), 9) * 2) - SizeUtils.dip2px(AppContext.getInstance(), 6)) / 2;
+                params.width = (mScrrenW - (SizeUtils.dip2px(AppContextLike.getInstance(), 9) * 2) - SizeUtils.dip2px(AppContextLike.getInstance(), 6)) / 2;
                 params.height = params.width * 3 / 4;
                 break;
             case 35:// （2 列数据）
@@ -335,45 +335,45 @@ public class FitScreenUtil {
             // 专题gridview双列，每个图4:3显示,专题9模板，两列数据4:3
             case 1000:
                 //  距左右9dp,中间2个图6dp。 将dp转换为px工具
-                params.width = (mScrrenW - (SizeUtils.dip2px(AppContext.getInstance(), 9) * 2) - SizeUtils.dip2px(AppContext.getInstance(), 6)) / 2;
+                params.width = (mScrrenW - (SizeUtils.dip2px(AppContextLike.getInstance(), 9) * 2) - SizeUtils.dip2px(AppContextLike.getInstance(), 6)) / 2;
                 params.height = params.width * 3 / 4;
 
                 break;
             case 1001:
                 // 推荐首页，3列 4:5图片
                 // 36为距两边的距离，24为中间两个图的距离   二列
-                params.width = (mScrrenW - (SizeUtils.dip2px(AppContext.getInstance(), 9) * 2) - (SizeUtils.dip2px(AppContext.getInstance(), 6) * 2)) / 2;
+                params.width = (mScrrenW - (SizeUtils.dip2px(AppContextLike.getInstance(), 9) * 2) - (SizeUtils.dip2px(AppContextLike.getInstance(), 6) * 2)) / 2;
                 params.height = params.width * 4 / 5;
                 break;
 
             // 16;9 直播-王牌栏目
             case 1002:
-                params.width = (mScrrenW - (SizeUtils.dip2px(AppContext.getInstance(), 9) * 2) - SizeUtils.dip2px(AppContext.getInstance(), 6)) / 2;
+                params.width = (mScrrenW - (SizeUtils.dip2px(AppContextLike.getInstance(), 9) * 2) - SizeUtils.dip2px(AppContextLike.getInstance(), 6)) / 2;
                 params.height = params.width * 9 / 16;
                 break;
 
             case 1003:
                 // 电视剧3列4:5
                 // 36为距两边的距离，24为中间两个图的距离   三列
-                params.width = (mScrrenW - (SizeUtils.dip2px(AppContext.getInstance(), 9) * 2) - (SizeUtils.dip2px(AppContext.getInstance(), 6) * 2)) / 3;
+                params.width = (mScrrenW - (SizeUtils.dip2px(AppContextLike.getInstance(), 9) * 2) - (SizeUtils.dip2px(AppContextLike.getInstance(), 6) * 2)) / 3;
                 params.height = params.width * 5 / 4;
                 break;
 
 
             // 16;9 大图
             case 1004:
-                params.width = (mScrrenW - (SizeUtils.dip2px(AppContext.getInstance(), 9) * 2));
+                params.width = (mScrrenW - (SizeUtils.dip2px(AppContextLike.getInstance(), 9) * 2));
                 params.height = params.width * 9 / 16;
                 break;
 
             // 16;9 瀑布流
             case 1005:
-                params.width = (mScrrenW - (SizeUtils.dip2px(AppContext.getInstance(), 9) * 2));
+                params.width = (mScrrenW - (SizeUtils.dip2px(AppContextLike.getInstance(), 9) * 2));
                 params.height = params.width * 9 / 16;
                 break;
 
             case 91:
-                params.width = mScrrenW - (SizeUtils.dip2px(AppContext.getInstance(), 9) * 2);
+                params.width = mScrrenW - (SizeUtils.dip2px(AppContextLike.getInstance(), 9) * 2);
                 params.height = params.width * 9 / 16;
                 break;
             default:

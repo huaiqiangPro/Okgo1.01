@@ -2,42 +2,28 @@ package com.mybox.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.mybox.AppContext;
-import com.mybox.adpter.Recommend5LiveListAdapter;
-import com.mybox.adpter.RecommendGridViewAdapter;
-import com.mybox.adpter.RecommendType8ListAdapter;
+import com.mybox.AppContextLike;
 import com.mybox.base.BaseComponentFragment;
-import com.mybox.base.MyBaseAdapter;
 import com.mybox.listener.LiveChannelItemListener;
 import com.mybox.listener.MoreOnClickListener;
 import com.mybox.model.AdBigImageData;
-import com.mybox.model.RecommendHomeColumnListInfo;
 import com.mybox.model.RecommendedHomeBean;
 import com.mybox.R;
 import com.mybox.utils.FinalBitmap;
-import com.mybox.utils.FitScreenUtil;
 import com.mybox.utils.Logs;
-import com.mybox.utils.SizeUtils;
 import com.mybox.widget.AutoScrollViewPager;
-import com.mybox.widget.GridViewWithHeaderAndFooter;
-import com.mybox.widget.HorizontalListView;
 import com.mybox.widget.PointView;
 import com.mybox.widget.XListView;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -65,7 +51,7 @@ public class Rec1Fragment extends BaseComponentFragment<RecommendPresenter> impl
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mLayoutInflater = LayoutInflater.from(getActivity());
-        fb = FinalBitmap.create(AppContext.getInstance());
+        fb = FinalBitmap.create(AppContextLike.getInstance());
     }
 
     @Override
@@ -91,13 +77,13 @@ public class Rec1Fragment extends BaseComponentFragment<RecommendPresenter> impl
         mRemmendNewListView.setPullLoadEnable(false);
         mRemmendNewListView.setPullRefreshEnable(true);
 
-        mRecommendHeadView = LayoutInflater.from(AppContext.getInstance()).inflate(R.layout.common_banner, null);// 推荐头部
+        mRecommendHeadView = LayoutInflater.from(AppContextLike.getInstance()).inflate(R.layout.common_banner, null);// 推荐头部
         mConvenientBanner = (AutoScrollViewPager) mRecommendHeadView.findViewById(R.id.convenientBanner);
         mViewFlowTitle = (TextView) mRecommendHeadView.findViewById(R.id.tvBannerTitle);
     }
 
     protected void initData() {
-        if (AppContext.getBasePath() != null) {
+        if (AppContextLike.getBasePath() != null) {
             String mRecUrl = "http://cbox.cntv.cn/json2015/moban60/topshouye/index.json";
             mRecUrl = "http://cbox.cntv.cn/json2015/topshouye/tuijianaoyun/index.json";
             if (mRecUrl != null) {
@@ -177,7 +163,7 @@ public class Rec1Fragment extends BaseComponentFragment<RecommendPresenter> impl
      */
     private void initContentData(List mContentList) {
         Logs.e(TAG, "-------------------------> initContentData ");
-        Rec1Adapter adapter = new Rec1Adapter(AppContext.getInstance(), mContentList);
+        Rec1Adapter adapter = new Rec1Adapter(AppContextLike.getInstance(), mContentList);
         mRemmendNewListView.setAdapter(adapter);
     }
 

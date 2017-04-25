@@ -1,15 +1,12 @@
 package com.mybox.listener;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Toast;
 
 
-import com.mybox.AppContext;
+import com.mybox.AppContextLike;
 import com.mybox.model.RecommendHomeColumnListInfo;
 import com.mybox.model.RecommendedHomeBean;
 import com.mybox.utils.Logs;
@@ -82,7 +79,7 @@ LiveChannelItemListener implements AdapterView.OnItemClickListener, View.OnClick
      */
     private void onRecommendItemClick(List items, int position, int i) {
         if (mContext == null)
-            mContext = AppContext.getInstance();
+            mContext = AppContextLike.getInstance();
 
         Logs.e("TAG","点中-------------------");
         if (items.get(position).getClass().equals(ArrayList.class)) {
@@ -138,7 +135,7 @@ LiveChannelItemListener implements AdapterView.OnItemClickListener, View.OnClick
 
         {
             if (mContext == null)
-                mContext = AppContext.getInstance();
+                mContext = AppContextLike.getInstance();
             if (items == null || items.size() == 0)
                 return;
 

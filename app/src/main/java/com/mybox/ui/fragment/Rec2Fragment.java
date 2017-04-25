@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.mybox.AppContext;
+import com.mybox.AppContextLike;
 import com.mybox.adpter.Recommend5LiveListAdapter;
 import com.mybox.adpter.RecommendGridViewAdapter;
 import com.mybox.adpter.RecommendType8ListAdapter;
@@ -64,7 +64,7 @@ public class Rec2Fragment extends BaseComponentFragment<RecommendPresenter> impl
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mLayoutInflater = LayoutInflater.from(getActivity());
-        fb = FinalBitmap.create(AppContext.getInstance());
+        fb = FinalBitmap.create(AppContextLike.getInstance());
     }
 
     @Override
@@ -90,13 +90,13 @@ public class Rec2Fragment extends BaseComponentFragment<RecommendPresenter> impl
         mRemmendNewListView.setPullLoadEnable(false);
         mRemmendNewListView.setPullRefreshEnable(true);
 
-        mRecommendHeadView = LayoutInflater.from(AppContext.getInstance()).inflate(R.layout.common_banner, null);// 推荐头部
+        mRecommendHeadView = LayoutInflater.from(AppContextLike.getInstance()).inflate(R.layout.common_banner, null);// 推荐头部
         mConvenientBanner = (AutoScrollViewPager) mRecommendHeadView.findViewById(R.id.convenientBanner);
         mViewFlowTitle = (TextView) mRecommendHeadView.findViewById(R.id.tvBannerTitle);
     }
 
     protected void initData() {
-        if (AppContext.getBasePath() != null) {
+        if (AppContextLike.getBasePath() != null) {
             String mRecUrl = "http://cbox.cntv.cn/json2015/topshouye/tuijianaoyun/index.json";
             if (mRecUrl != null) {
                 mPresenter.loadData(mRecUrl);
@@ -216,12 +216,12 @@ public class Rec2Fragment extends BaseComponentFragment<RecommendPresenter> impl
 
                                 LinearLayout.LayoutParams layoutParams
                                         = (LinearLayout.LayoutParams) holder.mGridView.getLayoutParams();
-                                int margin = SizeUtils.dip2px(AppContext.getInstance(), 14);
+                                int margin = SizeUtils.dip2px(AppContextLike.getInstance(), 14);
                                 layoutParams.setMargins(0, margin, 0, margin);
                                 holder.mGridView.setLayoutParams(layoutParams);
 
 
-                                MyBaseAdapter adapter = new Recommend5LiveListAdapter(AppContext.getInstance(), mInteractliveList);
+                                MyBaseAdapter adapter = new Recommend5LiveListAdapter(AppContextLike.getInstance(), mInteractliveList);
                                 ((GridViewWithHeaderAndFooter) holder.mGridView).setAdapter(adapter);
 
                                 LiveChannelItemListener listener = new LiveChannelItemListener(getActivity(), mContentList, i);
@@ -241,7 +241,7 @@ public class Rec2Fragment extends BaseComponentFragment<RecommendPresenter> impl
 
                                     if (mColumnListEntity.isClone()) {
 
-                                        holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
+                                        holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
                                         if (null != mColumnListEntity.getAdImgUrl() && !"".equals(mColumnListEntity.getAdImgUrl())) {
                                             holder.ad_iv.setVisibility(View.VISIBLE);
                                             fb.display(holder.ad_iv, mColumnListEntity.getAdImgUrl());
@@ -258,7 +258,7 @@ public class Rec2Fragment extends BaseComponentFragment<RecommendPresenter> impl
                                         }
 
 
-                                        MyBaseAdapter adapter = new RecommendGridViewAdapter(AppContext.getInstance(), list, (holder.mGridView).getLayoutParams());
+                                        MyBaseAdapter adapter = new RecommendGridViewAdapter(AppContextLike.getInstance(), list, (holder.mGridView).getLayoutParams());
 
                                         if (adapter != null && adapter instanceof RecommendGridViewAdapter) {
                                             if (mContentList != null) {
@@ -309,14 +309,14 @@ public class Rec2Fragment extends BaseComponentFragment<RecommendPresenter> impl
                                                         holder.mMoreView.setOnClickListener(mMoreListeners.get(i));
                                                     }
                                                 }
-                                                holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
+                                                holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
                                                 if (null != mColumnListEntity.getAdImgUrl() && !"".equals(mColumnListEntity.getAdImgUrl())) {
                                                     holder.ad_iv.setVisibility(View.VISIBLE);
                                                     fb.display(holder.ad_iv, mColumnListEntity.getAdImgUrl());
                                                 }
 
                                                 ((GridViewWithHeaderAndFooter) holder.mGridView).setNumColumns(2);
-                                                adapter = new RecommendGridViewAdapter(AppContext.getInstance(), mItemList);
+                                                adapter = new RecommendGridViewAdapter(AppContextLike.getInstance(), mItemList);
 
                                                 if (adapter != null && adapter instanceof RecommendGridViewAdapter) {
                                                     if (mContentList != null) {
@@ -336,7 +336,7 @@ public class Rec2Fragment extends BaseComponentFragment<RecommendPresenter> impl
 
                                                 holder.mGridViewTextContent.setVisibility(View.GONE);
 
-                                                holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
+                                                holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnListEntity.getTitle()));
                                                 if (null != mColumnListEntity.getAdImgUrl() && !"".equals(mColumnListEntity.getAdImgUrl())) {
                                                     holder.ad_iv.setVisibility(View.VISIBLE);
                                                     fb.display(holder.ad_iv, mColumnListEntity.getAdImgUrl());
@@ -360,7 +360,7 @@ public class Rec2Fragment extends BaseComponentFragment<RecommendPresenter> impl
                                                 }
 
 
-                                                adapter = new RecommendType8ListAdapter(AppContext.getInstance(), mItemList);
+                                                adapter = new RecommendType8ListAdapter(AppContextLike.getInstance(), mItemList);
                                                 ((RecommendType8ListAdapter) adapter).setType(3);
 
                                                 ((GridViewWithHeaderAndFooter) holder.mGridView).setAdapter(adapter);
@@ -413,7 +413,7 @@ public class Rec2Fragment extends BaseComponentFragment<RecommendPresenter> impl
                     adapter.setListeners(mListeners);
                     adapter.notifyDataSetChanged();
                 } else {
-                    adapter = new RecommendAdapter(AppContext.getInstance());
+                    adapter = new RecommendAdapter(AppContextLike.getInstance());
                     adapter.setItems(mContentList);
                     adapter.setConvertViews(convertViews);
                     adapter.setListeners(mListeners);
@@ -524,7 +524,7 @@ public class Rec2Fragment extends BaseComponentFragment<RecommendPresenter> impl
         if (isVisibleToUser) { //相当于Fragment的onResume
 
         } else { //相当于Fragment的onPause
-            Glide.get(AppContext.getInstance()).clearMemory();
+            Glide.get(AppContextLike.getInstance()).clearMemory();
             System.gc();
 
         }

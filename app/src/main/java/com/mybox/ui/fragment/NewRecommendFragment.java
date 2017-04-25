@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mybox.AppContext;
+import com.mybox.AppContextLike;
 import com.mybox.adpter.Recommend2LiveAdapter;
 import com.mybox.adpter.Recommend4LiveListAdapter;
 import com.mybox.adpter.Recommend5LiveListAdapter;
@@ -122,7 +122,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
         mHomeAlertClose = (ImageView) mRootView.findViewById(R.id.home_alert_close);
 
 
-        mRecommendHeadView = LayoutInflater.from(AppContext.getInstance()).inflate(R.layout.common_banner, null);// 推荐头部
+        mRecommendHeadView = LayoutInflater.from(AppContextLike.getInstance()).inflate(R.layout.common_banner, null);// 推荐头部
         mConvenientBanner = (AutoScrollViewPager) mRecommendHeadView.findViewById(R.id.convenientBanner);
         mViewFlowTitle = (TextView) mRecommendHeadView.findViewById(R.id.tvBannerTitle);
 
@@ -241,7 +241,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
 
                         if (mColumnBean.isClone()) {//isClone 是大图，自由一列
 
-                            holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
+                            holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
                             if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                                 holder.ad_iv.setVisibility(View.VISIBLE);
                                 fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
@@ -262,7 +262,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                                 holder.mMoreView.setOnClickListener(mMoreListeners.get(i));
                             }
 
-                            MyBaseAdapter adapter = new RecommendGridViewAdapter(AppContext.getInstance(), list, (holder.mGridView).getLayoutParams());
+                            MyBaseAdapter adapter = new RecommendGridViewAdapter(AppContextLike.getInstance(), list, (holder.mGridView).getLayoutParams());
                             if (adapter != null && adapter instanceof RecommendGridViewAdapter) {
                                 if (mContentList != null) {
                                     if (mContentList.get(i) != null && mContentList.get(i) instanceof RecommendedHomeBean.DataEntity.ColumnListEntity) {
@@ -333,7 +333,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                                         holder.mLineView.setVisibility(View.GONE);
                                     }
 
-                                    holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
+                                    holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
                                     if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                                         holder.ad_iv.setVisibility(View.VISIBLE);
                                         fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
@@ -342,7 +342,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                                     if ("5".equals(templateType)) {
                                         //  3列
                                         ((GridViewWithHeaderAndFooter) holder.mGridView).setNumColumns(3);
-                                        adapter = new RecommendGridViewyingshijuAdapter(AppContext.getInstance(), mItemList, templateType);
+                                        adapter = new RecommendGridViewyingshijuAdapter(AppContextLike.getInstance(), mItemList, templateType);
 
                                         if (adapter != null && adapter instanceof RecommendGridViewyingshijuAdapter) {
                                             if (mContentList != null) {
@@ -356,7 +356,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                                     } else {
                                         //   2列
                                         ((GridViewWithHeaderAndFooter) holder.mGridView).setNumColumns(2);
-                                        adapter = new RecommendGridViewAdapter(AppContext.getInstance(), mItemList);
+                                        adapter = new RecommendGridViewAdapter(AppContextLike.getInstance(), mItemList);
 
                                         if (adapter != null && adapter instanceof RecommendGridViewAdapter) {
                                             if (mContentList != null) {
@@ -385,7 +385,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                                 case "3":
                                 case "4":
 
-                                    holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));//设置标题
+                                    holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));//设置标题
                                     if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                                         holder.ad_iv.setVisibility(View.VISIBLE);
                                         fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
@@ -399,7 +399,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                                             mItemList = mItemList.subList(0, 5);
                                         }
 
-                                        adapter = new RecommendType4ListAdapter(AppContext.getInstance(), mItemList, true);
+                                        adapter = new RecommendType4ListAdapter(AppContextLike.getInstance(), mItemList, true);
                                         ((RecommendType4ListAdapter) adapter).setType(3);
                                         ((GridViewWithHeaderAndFooter) holder.mGridView).setAdapter(adapter);
                                     } else {
@@ -407,7 +407,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                                             mItemList = mItemList.subList(0, 8);
                                         }
 
-                                        adapter = new RecommendType4ListAdapter(AppContext.getInstance(), mItemList);
+                                        adapter = new RecommendType4ListAdapter(AppContextLike.getInstance(), mItemList);
                                         ((GridViewWithHeaderAndFooter) holder.mGridView).setAdapter(adapter);
                                     }
                                     if (!TextUtils.isEmpty(mColumnBean.getCategoryControl()) &&
@@ -438,13 +438,13 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                                         holder.ad_iv = (ImageView) holder.convertView.findViewById(R.id.classify_ad_iv);
                                         holder.mMoreView = holder.convertView.findViewById(R.id.home_list_item_more);
 
-                                        holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
+                                        holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
                                         if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                                             holder.ad_iv.setVisibility(View.VISIBLE);
                                             fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
                                         }
 
-                                        adapter = new RecommendHorizontaljinrikandainAdapter(AppContext.getInstance(), mItemList);
+                                        adapter = new RecommendHorizontaljinrikandainAdapter(AppContextLike.getInstance(), mItemList);
 
                                         if (adapter != null && adapter instanceof RecommendHorizontaljinrikandainAdapter) {
                                             if (mContentList != null) {
@@ -472,13 +472,13 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                                         holder.ad_iv = (ImageView) holder.convertView.findViewById(R.id.classify_ad_iv);
                                         holder.mMoreView = holder.convertView.findViewById(R.id.home_list_item_more);
 
-                                        holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
+                                        holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));
                                         if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                                             holder.ad_iv.setVisibility(View.VISIBLE);
                                             fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
                                         }
 
-                                        adapter = new RecommendHorizontalcainixihuanAdapter(AppContext.getInstance(), ((List) mColumnBean.getInfo()));
+                                        adapter = new RecommendHorizontalcainixihuanAdapter(AppContextLike.getInstance(), ((List) mColumnBean.getInfo()));
 
                                         ((HorizontalListView) holder.mGridView).setAdapter(adapter);
                                         ((HorizontalListView) holder.mGridView).setSelection(100);
@@ -501,7 +501,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                                 case "8":
 
                                     holder.mGridViewTextContent.setVisibility(View.GONE);
-                                    holder.mGridViewLabel.setText(String.format(AppContext.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));//设置标题
+                                    holder.mGridViewLabel.setText(String.format(AppContextLike.getInstance().getString(R.string.vodnew_title_replace), mColumnBean.getTitle()));//设置标题
                                     if (null != mColumnBean.getAdImgUrl() && !"".equals(mColumnBean.getAdImgUrl())) {
                                         holder.ad_iv.setVisibility(View.VISIBLE);
                                         fb.display(holder.ad_iv, mColumnBean.getAdImgUrl());
@@ -544,7 +544,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                                     }
 
 
-                                    adapter = new RecommendType8ListAdapter(AppContext.getInstance(), mItemList);
+                                    adapter = new RecommendType8ListAdapter(AppContextLike.getInstance(), mItemList);
                                     ((RecommendType8ListAdapter) adapter).setType(3);
 
                                     ((GridViewWithHeaderAndFooter) holder.mGridView).setAdapter(adapter);
@@ -596,12 +596,12 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
 
                             LinearLayout.LayoutParams layoutParams
                                     = (LinearLayout.LayoutParams) holder.mGridView.getLayoutParams();
-                            int margin = SizeUtils.dip2px(AppContext.getInstance(), 14);
+                            int margin = SizeUtils.dip2px(AppContextLike.getInstance(), 14);
                             layoutParams.setMargins(0, margin, 0, margin);
                             holder.mGridView.setLayoutParams(layoutParams);
 
 
-                            MyBaseAdapter adapter = new Recommend5LiveListAdapter(AppContext.getInstance(), ((List) mContentList.get(i)));
+                            MyBaseAdapter adapter = new Recommend5LiveListAdapter(AppContextLike.getInstance(), ((List) mContentList.get(i)));
                             ((GridViewWithHeaderAndFooter) holder.mGridView).setAdapter(adapter);
 
                             LiveChannelItemListener listener = new LiveChannelItemListener(getActivity(), mContentList, i);
@@ -619,7 +619,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
 
                             (((GridViewWithHeaderAndFooter) holder.mGridView)).setNumColumns(((List) mContentList.get(i)).size());
 
-                            MyBaseAdapter adapter = new Recommend4LiveListAdapter(AppContext.getInstance(), ((List) mContentList.get(i)));
+                            MyBaseAdapter adapter = new Recommend4LiveListAdapter(AppContextLike.getInstance(), ((List) mContentList.get(i)));
                             ((GridViewWithHeaderAndFooter) holder.mGridView).setAdapter(adapter);
 
                             LiveChannelItemListener listener = new LiveChannelItemListener(getActivity(), mContentList, i);
@@ -636,7 +636,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                             holder.mLineView = holder.convertView.findViewById(R.id.home_item_gridview_line);
                             ((GridViewWithHeaderAndFooter) holder.mGridView).setNumColumns(1);
 
-                            MyBaseAdapter adapter = new Recommend2LiveAdapter(AppContext.getInstance(), (List) mContentList.get(i));
+                            MyBaseAdapter adapter = new Recommend2LiveAdapter(AppContextLike.getInstance(), (List) mContentList.get(i));
                             ((GridViewWithHeaderAndFooter) holder.mGridView).setAdapter(adapter);
 
                             LiveChannelItemListener listener = new LiveChannelItemListener(getActivity(), mContentList, i);
@@ -656,7 +656,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                     List mList = new ArrayList();
                     mList.add(mContentList.get(i));
 
-                    MyBaseAdapter adapter = new RecommendGridViewAdapter(AppContext.getInstance(), mList);
+                    MyBaseAdapter adapter = new RecommendGridViewAdapter(AppContextLike.getInstance(), mList);
                     ((GridViewWithHeaderAndFooter) holder.mGridView).setAdapter(adapter);
 
                 }
@@ -679,7 +679,7 @@ public class NewRecommendFragment extends Fragment implements View.OnClickListen
                 adapter.setListeners(mListeners);
                 adapter.notifyDataSetChanged();
             } else {
-                adapter = new RecommendAdapter(AppContext.getInstance());
+                adapter = new RecommendAdapter(AppContextLike.getInstance());
                 adapter.setItems(mContentList);
                 adapter.setConvertViews(convertViews);
                 adapter.setListeners(mListeners);
