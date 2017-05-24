@@ -17,7 +17,7 @@ import com.mybox.ui.fragment.Rec2Fragment;
 import com.mybox.ui.fragment.Rec3Fragment;
 
 
-public class HomeActivity extends AppCompatActivity implements OnClickListener {
+public class Home1Activity extends AppCompatActivity implements OnClickListener {
 
     private FragmentManager fm;
     private NewRecommendFragment mHomeFragment;

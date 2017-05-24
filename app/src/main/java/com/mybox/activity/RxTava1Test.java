@@ -15,7 +15,7 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
-public class RxTavaTest {
+public class RxTava1Test {
 
     String tag = "RxjavaTest";
     public class UserInfo {
