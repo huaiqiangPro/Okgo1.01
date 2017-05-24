@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.mybox.AppContextLike;
+import com.mybox.AppContext;
 import com.mybox.base.MyBaseAdapter;
 import com.mybox.listener.LiveChannelItemListener;
 import com.mybox.model.RecommendHomeColumnListInfo;
@@ -52,7 +52,7 @@ public class RecommendType8ListAdapter extends MyBaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
 
         try {
-            Glide.get(AppContextLike.getInstance()).clearMemory();
+            Glide.get(AppContext.getInstance()).clearMemory();
             Glide.get(mContext).clearMemory();
             ViewHolder holder;
             if (convertView == null) {

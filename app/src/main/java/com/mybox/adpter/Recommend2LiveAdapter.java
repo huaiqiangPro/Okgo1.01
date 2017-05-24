@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mybox.AppContextLike;
+import com.mybox.AppContext;
 import com.mybox.base.MyBaseAdapter;
 import com.mybox.listener.LiveChannelItemListener;
 import com.mybox.model.LiveChannelProgressBean;
@@ -82,7 +82,7 @@ public class Recommend2LiveAdapter extends MyBaseAdapter {
         if (items.get(position) == null || ((RecommendedHomeBean.DataEntity.NormalLiveListEntity) items.get(position)).requestCount > 3) {
             return;
         }
-        String baseUrl = AppContextLike.getBasePath().get("living_url");
+        String baseUrl = AppContext.getBasePath().get("living_url");
         String url = baseUrl + "&c=" + bean.getChannelId();
 
         HttpTools.get(url, new HttpCallback() {

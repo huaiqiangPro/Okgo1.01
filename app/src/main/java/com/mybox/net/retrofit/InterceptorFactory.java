@@ -2,7 +2,7 @@ package com.mybox.net.retrofit;
 
 import android.content.Context;
 
-import com.mybox.AppContextLike;
+import com.mybox.AppContext;
 import com.mybox.utils.NetUtils;
 
 import java.io.IOException;
@@ -27,7 +27,7 @@ public class InterceptorFactory {
     private static final Interceptor REWRITE_CACHE_CONTROL_INTERCEPTOR = new Interceptor() {
         @Override
         public Response intercept(Chain chain) throws IOException {
-            Context context = AppContextLike.getInstance();
+            Context context = AppContext.getInstance();
 
             Request request = chain.request();
             if (request.cacheControl().noCache()) {

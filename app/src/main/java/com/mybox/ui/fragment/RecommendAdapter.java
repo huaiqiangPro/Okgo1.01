@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
-import com.mybox.AppContextLike;
+import com.mybox.AppContext;
 import com.mybox.base.MyBaseAdapter;
 import com.mybox.listener.LiveChannelItemListener;
 import com.mybox.R;
@@ -33,7 +33,7 @@ public class RecommendAdapter extends MyBaseAdapter {
 
     public RecommendAdapter(Context mContext) {
         this.mContext = mContext;
-        inflater = LayoutInflater.from(AppContextLike.getInstance());
+        inflater = LayoutInflater.from(AppContext.getInstance());
         fb = FinalBitmap.create(mContext);
     }
     public void setListeners(SparseArray mListeners) {
@@ -49,7 +49,7 @@ public class RecommendAdapter extends MyBaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Glide.get(AppContextLike.getInstance()).clearMemory();
+        Glide.get(AppContext.getInstance()).clearMemory();
         Glide.get(mContext).clearMemory();
         ViewHolder holder;
         if (convertView == null) {

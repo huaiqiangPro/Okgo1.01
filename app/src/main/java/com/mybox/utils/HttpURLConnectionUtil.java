@@ -1,6 +1,11 @@
 package com.mybox.utils;
 
-import com.mybox.AppContextLike;
+import com.mybox.AppContext;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 
 /*
@@ -11,8 +16,8 @@ public class HttpURLConnectionUtil {
 
     public static String getZNTJurl() {
         String zntjUrl = null;
-        if (AppContextLike.getBasePath() != null) {
-            zntjUrl = AppContextLike.getBasePath().get("zntj_index_url");
+        if (AppContext.getBasePath() != null) {
+            zntjUrl = AppContext.getBasePath().get("zntj_index_url");
             if (zntjUrl != null) {
                 zntjUrl = getZNTJurl(zntjUrl);
             }
@@ -31,11 +36,11 @@ public class HttpURLConnectionUtil {
 
         String userId = null;
         //IMEI、MAC、FA、Aid的获取方法，采用国双提供的API函数
-        String mStrIMEI = MD5.getImei(AppContextLike.getInstance());//IMEI
+        String mStrIMEI = MD5.getImei(AppContext.getInstance());//IMEI
         String finalmStrIMEI = MD5.checkParameter(mStrIMEI, 32);
-        String mMacAddress = MD5.getMacAddress(AppContextLike.getInstance());//MAC
+        String mMacAddress = MD5.getMacAddress(AppContext.getInstance());//MAC
         String finalmMacAddress = MD5.checkParameter(mMacAddress, 32);
-        String mAndroidId = MD5.generateAndroidId(AppContextLike.getInstance());//AndroidId
+        String mAndroidId = MD5.generateAndroidId(AppContext.getInstance());//AndroidId
         String finalmAndroidId = MD5.checkParameter(mAndroidId, 32);
 
 
